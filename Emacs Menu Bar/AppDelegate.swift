@@ -10,29 +10,25 @@ import Cocoa
 //@main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    private var window: NSWindow!
     private var statusItem: NSStatusItem!
     private var logPath: String!
     private var serverPath: String!
     private var emacsPath: String!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 270),
-            styleMask: [.miniaturizable, .closable, .resizable, .titled],
-            backing: .buffered, defer: false)
-        window.center()
-        window.title = "No Storyboard Window"
-        window.makeKeyAndOrderFront(nil)
         
         logPath = "\(NSHomeDirectory())/Library/Logs/emacs-menu-bar.log"
         serverPath = "\(NSHomeDirectory())/.emacs.d/server"
         emacsPath = "/Applications/Emacs.app/Contents/MacOS/bin/"
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        
+        let icon = NSImage(named: "StatusIcon")!
+        let resizedIcon = NSImage(size: NSSize(width: 18, height: 18), flipped: false) { (dstRect) -> Bool in
+            icon.draw(in: dstRect)
+            return true
+        }
         if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "1.circle", accessibilityDescription: "1")
+            button.image = resizedIcon
         }
         
         setupMenus()
