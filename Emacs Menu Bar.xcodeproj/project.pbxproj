@@ -10,7 +10,7 @@
 		E161BDAB2B5C8A6900904456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161BDAA2B5C8A6900904456 /* AppDelegate.swift */; };
 		E161BDAD2B5C8A6900904456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161BDAC2B5C8A6900904456 /* ViewController.swift */; };
 		E161BDAF2B5C8A6A00904456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E161BDAE2B5C8A6A00904456 /* Assets.xcassets */; };
-		E161BDB22B5C8A6A00904456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E161BDB02B5C8A6A00904456 /* Main.storyboard */; };
+		E1BA6C202B5C8BD4004DC1AC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA6C1F2B5C8BD4004DC1AC /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,8 +18,8 @@
 		E161BDAA2B5C8A6900904456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E161BDAC2B5C8A6900904456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E161BDAE2B5C8A6A00904456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E161BDB12B5C8A6A00904456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E161BDB32B5C8A6A00904456 /* Emacs_Menu_Bar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Emacs_Menu_Bar.entitlements; sourceTree = "<group>"; };
+		E1BA6C1F2B5C8BD4004DC1AC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 			children = (
 				E161BDAA2B5C8A6900904456 /* AppDelegate.swift */,
 				E161BDAC2B5C8A6900904456 /* ViewController.swift */,
+				E1BA6C1F2B5C8BD4004DC1AC /* main.swift */,
 				E161BDAE2B5C8A6A00904456 /* Assets.xcassets */,
-				E161BDB02B5C8A6A00904456 /* Main.storyboard */,
 				E161BDB32B5C8A6A00904456 /* Emacs_Menu_Bar.entitlements */,
 			);
 			path = "Emacs Menu Bar";
@@ -120,7 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E161BDAF2B5C8A6A00904456 /* Assets.xcassets in Resources */,
-				E161BDB22B5C8A6A00904456 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,21 +132,11 @@
 			files = (
 				E161BDAD2B5C8A6900904456 /* ViewController.swift in Sources */,
 				E161BDAB2B5C8A6900904456 /* AppDelegate.swift in Sources */,
+				E1BA6C202B5C8BD4004DC1AC /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E161BDB02B5C8A6A00904456 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E161BDB12B5C8A6A00904456 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E161BDB42B5C8A6A00904456 /* Debug */ = {
@@ -202,6 +191,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -259,6 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -279,7 +270,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,7 +294,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
