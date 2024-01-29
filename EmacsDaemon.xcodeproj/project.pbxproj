@@ -18,7 +18,7 @@
 		E161BDAA2B5C8A6900904456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E161BDAC2B5C8A6900904456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E161BDAE2B5C8A6A00904456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E161BDB32B5C8A6A00904456 /* Emacs_Menu_Bar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Emacs_Menu_Bar.entitlements; sourceTree = "<group>"; };
+		E161BDB32B5C8A6A00904456 /* EmacsDaemon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmacsDaemon.entitlements; sourceTree = "<group>"; };
 		E1BA6C1F2B5C8BD4004DC1AC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -36,7 +36,7 @@
 		E161BD9E2B5C8A6900904456 = {
 			isa = PBXGroup;
 			children = (
-				E161BDA92B5C8A6900904456 /* Emacs Menu Bar */,
+				E161BDA92B5C8A6900904456 /* EmacsDaemon */,
 				E161BDA82B5C8A6900904456 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,16 +49,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E161BDA92B5C8A6900904456 /* Emacs Menu Bar */ = {
+		E161BDA92B5C8A6900904456 /* EmacsDaemon */ = {
 			isa = PBXGroup;
 			children = (
 				E161BDAA2B5C8A6900904456 /* AppDelegate.swift */,
 				E161BDAC2B5C8A6900904456 /* ViewController.swift */,
 				E1BA6C1F2B5C8BD4004DC1AC /* main.swift */,
 				E161BDAE2B5C8A6A00904456 /* Assets.xcassets */,
-				E161BDB32B5C8A6A00904456 /* Emacs_Menu_Bar.entitlements */,
+				E161BDB32B5C8A6A00904456 /* EmacsDaemon.entitlements */,
 			);
-			path = "Emacs Menu Bar";
+			path = EmacsDaemon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +264,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Emacs Menu Bar/Emacs_Menu_Bar.entitlements";
+				CODE_SIGN_ENTITLEMENTS = EmacsDaemon/EmacsDaemon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -278,7 +278,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.spectroship.Emacs-Menu-Bar";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spectroship.EmacsDaemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -290,7 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Emacs Menu Bar/Emacs_Menu_Bar.entitlements";
+				CODE_SIGN_ENTITLEMENTS = EmacsDaemon/EmacsDaemon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -304,7 +304,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.spectroship.Emacs-Menu-Bar";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spectroship.EmacsDaemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
