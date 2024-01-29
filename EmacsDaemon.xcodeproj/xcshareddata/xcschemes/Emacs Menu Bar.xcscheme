@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E161BDA62B5C8A6900904456"
-               BuildableName = "Emacs Menu Bar.app"
-               BlueprintName = "Emacs Menu Bar"
-               ReferencedContainer = "container:Emacs Menu Bar.xcodeproj">
+               BuildableName = "EmacsDaemon.app"
+               BlueprintName = "EmacsDaemon"
+               ReferencedContainer = "container:EmacsDaemon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E161BDA62B5C8A6900904456"
-            BuildableName = "Emacs Menu Bar.app"
-            BlueprintName = "Emacs Menu Bar"
-            ReferencedContainer = "container:Emacs Menu Bar.xcodeproj">
+            BuildableName = "EmacsDaemon.app"
+            BlueprintName = "EmacsDaemon"
+            ReferencedContainer = "container:EmacsDaemon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E161BDA62B5C8A6900904456"
-            BuildableName = "Emacs Menu Bar.app"
-            BlueprintName = "Emacs Menu Bar"
-            ReferencedContainer = "container:Emacs Menu Bar.xcodeproj">
+            BuildableName = "EmacsDaemon.app"
+            BlueprintName = "EmacsDaemon"
+            ReferencedContainer = "container:EmacsDaemon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

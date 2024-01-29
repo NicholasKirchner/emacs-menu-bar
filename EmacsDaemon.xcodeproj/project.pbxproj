@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E161BDA72B5C8A6900904456 /* Emacs Menu Bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emacs Menu Bar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E161BDA72B5C8A6900904456 /* EmacsDaemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmacsDaemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161BDAA2B5C8A6900904456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E161BDAC2B5C8A6900904456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E161BDAE2B5C8A6A00904456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		E161BDA82B5C8A6900904456 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E161BDA72B5C8A6900904456 /* Emacs Menu Bar.app */,
+				E161BDA72B5C8A6900904456 /* EmacsDaemon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,9 +64,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E161BDA62B5C8A6900904456 /* Emacs Menu Bar */ = {
+		E161BDA62B5C8A6900904456 /* EmacsDaemon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E161BDB62B5C8A6A00904456 /* Build configuration list for PBXNativeTarget "Emacs Menu Bar" */;
+			buildConfigurationList = E161BDB62B5C8A6A00904456 /* Build configuration list for PBXNativeTarget "EmacsDaemon" */;
 			buildPhases = (
 				E161BDA32B5C8A6900904456 /* Sources */,
 				E161BDA42B5C8A6900904456 /* Frameworks */,
@@ -76,9 +76,9 @@
 			);
 			dependencies = (
 			);
-			name = "Emacs Menu Bar";
+			name = EmacsDaemon;
 			productName = "Emacs Menu Bar";
-			productReference = E161BDA72B5C8A6900904456 /* Emacs Menu Bar.app */;
+			productReference = E161BDA72B5C8A6900904456 /* EmacsDaemon.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E161BDA22B5C8A6900904456 /* Build configuration list for PBXProject "Emacs Menu Bar" */;
+			buildConfigurationList = E161BDA22B5C8A6900904456 /* Build configuration list for PBXProject "EmacsDaemon" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +109,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E161BDA62B5C8A6900904456 /* Emacs Menu Bar */,
+				E161BDA62B5C8A6900904456 /* EmacsDaemon */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +314,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E161BDA22B5C8A6900904456 /* Build configuration list for PBXProject "Emacs Menu Bar" */ = {
+		E161BDA22B5C8A6900904456 /* Build configuration list for PBXProject "EmacsDaemon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E161BDB42B5C8A6A00904456 /* Debug */,
@@ -323,7 +323,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E161BDB62B5C8A6A00904456 /* Build configuration list for PBXNativeTarget "Emacs Menu Bar" */ = {
+		E161BDB62B5C8A6A00904456 /* Build configuration list for PBXNativeTarget "EmacsDaemon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E161BDB72B5C8A6A00904456 /* Debug */,
