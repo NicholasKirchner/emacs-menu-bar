@@ -11,13 +11,13 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     private var statusItem: NSStatusItem!
-    private var logPath: String!
+    private var logFile: URL!
     private var serverPath: String!
     private var emacsPath: String!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        logPath = "\(NSHomeDirectory())/Library/Logs/emacs-menu-bar.log"
+        logFile = URL(fileURLWithPath: "\(NSHomeDirectory())/Library/Logs/emacs-menu-bar.log")
         serverPath = "\(NSHomeDirectory())/.emacs.d/server"
         emacsPath = "/Applications/Emacs.app/Contents/MacOS/bin/"
         
@@ -51,18 +51,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func viewLogs() {
-        NSWorkspace.shared.open(NSURL.fileURL(withPath: logPath))
+        NSWorkspace.shared.open(logFile)
     }
     
     @objc func doNew() throws -> String {
-        NSLog("Entered doNew")
+        NSLog("Creating new GUI Emacs Frame")
         let output = try emacsShellCommand("emacsclient", ["-c", "-n", "--socket-name=\(serverPath ?? "")/server"])
         NSLog(output)
         return output
     }
     
     @objc func doStart() throws -> String {
-        NSLog("Entered doStart")
+        NSLog("Starting Daemon")
         let shell = try shellCommand("/bin/sh", ["-c", "dscl . -read \(NSHomeDirectory()) UserShell | sed \"s/UserShell: //\""]).trimmingCharacters(in: .whitespacesAndNewlines)
         NSLog(shell)
         let output = try shellCommand(shell, ["-l", "-c", "emacs --daemon"])
@@ -75,7 +75,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func doStop() throws -> String {
-        NSLog("Entered doStop")
+        NSLog("Stopping Daemon")
         let output = try emacsShellCommand("emacsclient", ["-e",  "(save-buffers-kill-emacs)", "--socket-name=\(serverPath ?? "")/server"])
         NSLog(output)
         return output
@@ -107,7 +107,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         let output = String(data: data, encoding: .utf8)!
+        
+        writeToLog(output)
             
         return output
+    }
+    
+    func writeToLog(_ message: String) {
+        let data = Data(message.utf8)
+        
+        if FileManager.default.fileExists(atPath: logFile.path) {
+            if let fileHandle = try? FileHandle(forWritingTo: logFile) {
+                fileHandle.seekToEndOfFile()
+                fileHandle.write(data)
+                fileHandle.closeFile()
+            }
+            else {
+                print("Can't open existing log file")
+            }
+        }
+        else {
+            try? data.write(to: logFile, options: .atomicWrite)
+        }
     }
 }
