@@ -55,18 +55,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func doNew() throws -> String {
-        NSLog("Creating new GUI Emacs Frame")
+        writeToLog("Creating new GUI Emacs Frame\n")
         let output = try emacsShellCommand("emacsclient", ["-c", "-n", "--socket-name=\(serverPath ?? "")/server"])
-        NSLog(output)
         return output
     }
     
     @objc func doStart() throws -> String {
-        NSLog("Starting Daemon")
+        writeToLog("Finding your default login shell and environment\n")
         let shell = try shellCommand("/bin/sh", ["-c", "dscl . -read \(NSHomeDirectory()) UserShell | sed \"s/UserShell: //\""]).trimmingCharacters(in: .whitespacesAndNewlines)
-        NSLog(shell)
+        writeToLog("Starting Daemon\n")
         let output = try shellCommand(shell, ["-l", "-c", "emacs --daemon"])
-        NSLog(output)
         return output
     }
     
@@ -75,9 +73,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func doStop() throws -> String {
-        NSLog("Stopping Daemon")
+        writeToLog("Stopping Daemon\n")
         let output = try emacsShellCommand("emacsclient", ["-e",  "(save-buffers-kill-emacs)", "--socket-name=\(serverPath ?? "")/server"])
-        NSLog(output)
         return output
     }
 
