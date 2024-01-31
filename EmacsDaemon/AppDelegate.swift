@@ -68,8 +68,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return output
     }
     
-    @objc func doRestart() {
-        
+    @objc func doRestart() throws -> String {
+        writeToLog("Restarting Daemon")
+        var output = try doStop()
+        output += try doStart()
+        return output
     }
     
     @objc func doStop() throws -> String {
