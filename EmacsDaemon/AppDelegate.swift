@@ -32,6 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         setupMenus()
+        _ = try! doStart()
     }
     
     func setupMenus() {
